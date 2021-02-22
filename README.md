@@ -7,7 +7,11 @@ Refactoring the code consisted of completing the following steps:
 - Creating three arrays (tickerVolumes, tickerStartingPrices, tickerEndingPrices)
 - Creating a loop through the stock data to read and store the following values from each row: tickers, tickerVolumes, tickerStartingPrices, tickerEndingPrices.
 
+Implementing the tickerIndex variable allowed me to analyze the data faster than before: this is because the other three arrays (tickerVolumes, tickerStartingPrices, and tickerEndingPrices) could be assigned to each ticker (stock) before iterating through the data set.
+
 See the refactored code below:
+
+### Refactored Code
 
     Sub AllStocksAnalysisRefactored()
     Dim startTime As Single
@@ -102,6 +106,7 @@ See the refactored code below:
      
     End Sub
 
+### Run-Time Comparison
 
 ## Summary
 There are advantages and disadvantages to refactoring code, as evidenced by this project - see below:
