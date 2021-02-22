@@ -13,100 +13,14 @@ See the refactored code below:
 
 ### Refactored Code
 
-    Sub AllStocksAnalysisRefactored()
-    Dim startTime As Single
-    Dim endTime  As Single
-
-    yearValue = InputBox("What year would you like to run the analysis on?")
-
-    startTime = Timer
-    
-    'Format the output sheet on All Stocks Analysis worksheet
-    Worksheets("All Stocks Analysis").Activate
-    
-    Range("A1").Value = "All Stocks (" + yearValue + ")"
-    
-    'Create a header row
-    Cells(3, 1).Value = "Ticker"
-    Cells(3, 2).Value = "Total Daily Volume"
-    Cells(3, 3).Value = "Return"
-
-    'Initialize array of all tickers
-    Dim tickers(12) As String
-    
-    tickers(0) = "AY"
-    tickers(1) = "CSIQ"
-    tickers(2) = "DQ"
-    tickers(3) = "ENPH"
-    tickers(4) = "FSLR"
-    tickers(5) = "HASI"
-    tickers(6) = "JKS"
-    tickers(7) = "RUN"
-    tickers(8) = "SEDG"
-    tickers(9) = "SPWR"
-    tickers(10) = "TERP"
-    tickers(11) = "VSLR"
-    
-    'Activate data worksheet
-    Worksheets(yearValue).Activate
-    
-    'Get the number of rows to loop over
-    RowCount = Cells(Rows.Count, "A").End(xlUp).Row
-    
-    '1a) Create a ticker Index
-        Dim tickerIndex As Single
-        tickerIndex = 0
-    
-    '1b) Create three output arrays
-        Dim tickerVolumes(12) As Long
-        Dim tickerStartingPrices(12) As Single
-        Dim tickerEndingPrices(12) As Single
-    
-    ''2a) Create a for loop to initialize the tickerVolumes to zero.
-        For i = 0 To 11
-        tickerVolumes(tickerIndex) = 0
-        
-    ''2b) Loop over all the rows in the spreadsheet.
-        For j = 2 To RowCount
-    
-        '3a) Increase volume for current ticker
-        tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(j, 8).Value
-        
-        '3b) Check if the current row is the first row with the selected tickerIndex.
-        'If  Then
-
-        If Cells(j - 1, 1).Value <> tickers(tickerIndex) And Cells(j, 1).Value = tickers(tickerIndex) Then
-            tickerStartingPrices(tickerIndex) = Cells(j, 6).Value
-            End If
-            
-        
-        '3c) check if the current row is the last row with the selected ticker
-         'If the next row‚Äôs ticker doesn‚Äôt match, increase the tickerIndex.
-        'If  Then
-            
-             If Cells(j + 1, 1).Value <> tickers(tickerIndex) And Cells(j, 1).Value = tickers(tickerIndex) Then
-            tickerEndingPrices(tickerIndex) = Cells(j, 6).Value
-
-            '3d Increase the tickerIndex.
-            
-            tickerIndex = tickerIndex + 1
-        
-        End If
-        
-        Next j
-    
-    '4) Loop through your arrays to output the Ticker, Total Daily Volume, and Return.
-        
-        Worksheets("All Stocks Analysis").Activate
-        Cells(4 + i, 1).Value = ticker
-        Cells(4 + i, 2).Value = TotalVolume
-        Cells(4 + i, 3).Value = endingPrice / startingPrice - 1
-
-    Next i
-     
-    End Sub
-
 ### Run-Time Comparison
+Original Code: 2017
+
+Original Code: 2018
+
+Refactored Code: 2017
+
+Refactored Code: 2018
 
 ## Summary
 There are advantages and disadvantages to refactoring code, as evidenced by this project - see below:
