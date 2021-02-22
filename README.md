@@ -6,6 +6,7 @@ Refactoring the code consisted of completing the following steps:
 - Creating a ticker index variable (tickerIndex) to access the correct index across four different arrays.
 - Creating three arrays (tickerVolumes, tickerStartingPrices, tickerEndingPrices)
 - Creating a loop through the stock data to read and store the following values from each row: tickers, tickerVolumes, tickerStartingPrices, tickerEndingPrices.
+
 See the refactored code below:
 
 
