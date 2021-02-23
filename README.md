@@ -120,7 +120,7 @@ In addition, the results both both 2017 and 2018 stocks are below:
 
 ### Run-Time Comparison
 
-The time differences between 
+The time it takes to run the analysis via the original code (2017, 2018) and the refactored code (2017, 2018) is shown below. There is approximately a second difference between the original and the refactored code for both years.
 
 Original Code: 2017
 ![2017 Original Time](https://github.com/marikachrisanthopoulos/Stock-Analysis/blob/main/Resources/VBA_PreRefactored_2017.png)
@@ -137,13 +137,16 @@ Refactored Code: 2018
 ## Summary
 There are advantages and disadvantages to refactoring code, both in general and in this project specifically - see below:
 ### Advantages - General
-- Potential for greater efficiency (faster; less code for the same amount of tasks; easily adjustable for shifting variables, such as year)
+- Potential for greater efficiency (faster; less code for the same amount of tasks; easily adjustable for shifting variables)
 - Potential to be more easily read/understood by other programmers
 - Potential to be used for similar future analyses (easier template to edit and reuse)
 - Original code can be used and then edited (programmers do not need to start from scratch)
 ### Disadvantages - General
 - Potential of disrupting the code to make it unuseable (until debugging procedures figure out the error)
 ### Advantages - Stock Analysis Project
+- Greater efficiency (over a second faster than the original code; easily adjustable for shifting variables)
+- Can be easily interpreted/edited by other programmers for future analyses
 ### Disadvantages - Stock Analysis Project
+- The original code was disrupted and took time to reformulate
 ### Overall
 In general, I found refactoring the code to be a difficult, but rewarding, task. Considering my understanding of the syntax is still limited, I had a challenging time working through the errors I created while trying to make the code more efficient. However, working through these errors was helpful to enhance my knowledge of VBA syntax, and felt like an accomplishment once I finally was able to successfuly run the task.
